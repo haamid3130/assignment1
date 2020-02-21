@@ -1,0 +1,143 @@
+Text file
+
+Dance Monkey, by Tones and I, 5943521
+
+The Box, Roddy Rich 5763703
+
+Blinding lights, The weeknd,  5701747
+
+Intentions , Juston bieber, 4753680
+
+Don’t start Now, Dua Lipa ,4620166
+
+No Time to Die , Dua Lipa 4339313  
+
+
+TopArtistsSreaming.java
+
+import java.io.*;
+
+Import java.util.*;
+
+public class TopartistStreaming{
+
+/***INPUT =2D String file and its columns and rows
+Out put only print array
+
+****/
+
+
+
+String[][]music;
+public static String[][]readFileAndGetmusic(){
+Scanner file;
+Try{
+file=new Scanner (newScanner(newFile(“names.txt”));
+Int rows =6,columns=3;
+String[][]music=new String [rows][columns];
+music=input(file,rows,columns,music);
+return  music;
+}catch(FileNotfoundException e){
+e.printStackTrace();
+}
+Return new String[0][0];
+}
+public static String[][]input (Scanner file, int rows. Int columns,string,[][]music){
+music=new String[rows][columns];
+for(int i=0;i<rows;i++){
+String split[]=file.next().split(“”);
+For (int j=0; j<columns;j++){
+music[i][j]=split[j];
+
+}
+
+}
+
+Return sortArray(music);
+}
+
+/
+/
+
+Public static void printArray(String[][]music){
+
+for (int i=0; i<music,length;i++){
+for(intj=0;j< music[i].length;j++){
+System.out.print(music[i][j];
+}
+System.out.print();
+}
+}
+/
+/
+public static String[][] sortArray(String [] [] music) {
+for (int i = 0; i < music.length; i++) {
+for (int j = i + 1; j < music.length; j++) {
+String[] curr = music[i];
+String[] next = music[j];
+String currArtistName = curr[1].split("by ")[1];
+String nextArtistName = next[1].split("by ")[1];
+if (currArtistName.compareTo(nextArtistName) > 0) {
+music[j] = curr;
+music[i] = next;
+}
+}
+}
+printArray(music);
+return music;
+}
+public static void main(String[] args) throws Exception{
+Scanner file = new Scanner(new File("names.txt"));
+   int rows =6 , columns = 3;
+   String[][] music = new String[rows][columns];
+   input(file, rows, columns, music);
+}
+}
+TopArtistsSreaming.java
+
+ 
+import java.io.*;
+import java.util.*;
+ 
+class Node{
+Node next; private String data;
+Node() {data = null; next = null;}
+Node(String data) {this.data = data;}
+}
+{
+TopArtistsSreaming.java
+ 
+private static LinkedList <String> ordered = new LinkedList<String>();
+public static LinkedList<String> insert (String [][] music) {
+for(int i = 0; i <music.length; i++) {
+for (int j = 0; j < music[i].length; j++) {
+ordered.add(music[i][j]);
+}
+}
+System.out.println(ordered);
+return ordered;
+}
+/**
+Input =args
+Output no output
+***/
+public static void main(String[] args) throws Exception{
+Scanner file = new Scanner(new File("names.txt"));
+String[][] music  = topArtists.readFileAndGetmusic();
+insert(music);
+}
+}
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
